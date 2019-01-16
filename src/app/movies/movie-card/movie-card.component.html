@@ -1,0 +1,31 @@
+<div class="card">
+        <div class="card-content">
+          <div class="columns is-vcentered">
+            <div class="column is-narrow">
+              <img src="{{ movie.thumbnail }}" alt="">
+            </div>
+            <div class="column">
+              <div class="title is-5">
+                {{ movie.title }} ({{ movie.year }})
+              </div>
+              <div class="subtitle is-6">
+                {{ movie.duration }} mins | {{ movie.genres }} | rating: {{ movie.rating }}
+              </div>
+              <p><b>director</b>: {{ movie.director }} | <b>stars</b>: {{ movie.stars }}</p>
+            </div>
+            <div *ngIf="!isHideButton" class="column is-narrow">
+              <div class="buttons">
+                <button (click)="deleteMovie()" class="button is-danger">
+                  delete movie
+                </button>
+       
+                <button [routerLink]="['/movie/edit/' + movie.id]" class="button">
+                  edit movie
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       
+       

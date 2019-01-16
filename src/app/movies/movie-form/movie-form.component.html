@@ -1,0 +1,63 @@
+<div class="columns">
+
+    <div class="column is-half">
+      <div class="field">
+        <label class="label">title</label>
+        <div class="control">
+          <input [(ngModel)]="movie.title" class="input" type="text" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">director</label>
+        <div class="control">
+          <input [(ngModel)]="movie.director" class="input" type="text" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">genres</label>
+        <div class="control">
+          <input [(ngModel)]="movie.genres" class="input" type="text" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">stars</label>
+        <div class="control">
+          <input [(ngModel)]="movie.stars" class="input" type="text" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">duration</label>
+        <div class="control">
+          <input [(ngModel)]="movie.duration" class="input" type="number" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">rating</label>
+        <div class="control">
+          <input [(ngModel)]="movie.rating" class="input" type="number" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">year</label>
+        <div class="control">
+          <input [(ngModel)]="movie.year" class="input" type="number" />
+        </div>
+      </div>
+   
+      <div class="field">
+        <label class="label">thumbnail</label>
+        <div class="control">
+          <input [(ngModel)]="movie.thumbnail" class="input" type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="column is-half">
+      <app-movie-card [movie]="movie" [isHideButton]="true"></app-movie-card>
+    </div>
+   </div>
+   

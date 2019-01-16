@@ -1,0 +1,12 @@
+<div class="title is-4">
+    Edit your movie
+</div>
+  
+<div *ngIf="movie$ | async as movie">
+    <app-movie-form [movie]="movie"></app-movie-form>
+    
+    <br>
+    <button (click)="updateMovie(movie)" class="button is-info">
+      update
+    </button>
+</div>

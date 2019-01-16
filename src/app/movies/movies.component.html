@@ -1,0 +1,10 @@
+<div class="columns is-vcentered">
+  <div class="column">
+    <div class="title is-4">My movies</div>
+  </div>
+  <div class="column is-narrow">
+    <button [routerLink]="['/movie/create']" class="button is-info">add new movie</button>
+  </div>
+</div>
+
+<app-movie-card *ngFor="let movie of movies$ | async" [movie]="movie"></app-movie-card>
